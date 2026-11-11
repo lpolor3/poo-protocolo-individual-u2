@@ -1,13 +1,39 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== PRUEBAS FINALES: TALLER 4 POO ===\n");
+
+        // 1. Probar la clase Estudiante
+        System.out.println("--- 1. Clase Estudiante ---");
+        Estudiante est = new Estudiante("Luis", 20, 4.5);
+        System.out.println("Estudiante: " + est.getNombre() + " | Nota: " + est.getNotaPromedio());
+
+        System.out.println("\n-----------------------------------\n");
+
+        // 2. Probar la clase Coche
+        System.out.println("--- 2. Clase Coche ---");
+        Coche miCoche = new Coche("Toyota", "Corolla", 180);
+        System.out.println("Coche: " + miCoche.getMarca() + " " + miCoche.getModelo());
+        miCoche.acelerar(30);
+
+        System.out.println("\n-----------------------------------\n");
+
+        // 3. Probar la clase CuentaSecreta (Ejercicio 3)
+        System.out.println("--- 3. Clase CuentaSecreta (Uso incorrecto / Restricción) ---");
+        CuentaSecreta cuenta = new CuentaSecreta("1234");
+        System.out.println("Objeto CuentaSecreta creado exitosamente.");
+
+        /*
+         * ===================================================================
+         * DEMOSTRACIÓN DE ERROR DE COMPILACIÓN (Punto 1 del Ejercicio 3):
+         * Si intentas descomentar las siguientes líneas, Java arrojará un error
+         * de compilación porque 'pinSecreto' es privado y no se puede leer
+         * ni modificar directamente desde la clase Main:
+         * ===================================================================
+         *
+         * System.out.println(cuenta.pinSecreto); // Error: pinSecreto has private access
+         * cuenta.pinSecreto = "9999";           // Error: pinSecreto has private access
+         */
     }
 }
