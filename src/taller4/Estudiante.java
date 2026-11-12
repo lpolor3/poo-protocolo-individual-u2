@@ -1,3 +1,5 @@
+package taller4;
+
 public class Estudiante {
     // 1. Todas las propiedades deben ser privadas (Encapsulamiento)
     private String nombre;

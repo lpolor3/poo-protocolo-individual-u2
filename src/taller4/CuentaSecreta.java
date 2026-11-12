@@ -1,3 +1,5 @@
+package taller4;
+
 public class CuentaSecreta {
     // Atributo privado sin getters ni setters
     private String pinSecreto;

@@ -1,3 +1,5 @@
+package taller4;
+
 public class Coche {// 1. Todas las propiedades deben ser privadas
     private String marca;
     private String modelo;
